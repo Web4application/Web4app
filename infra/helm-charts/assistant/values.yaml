@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: web4application/assistant
+  tag: latest
+service:
+  type: ClusterIP
+  port: 8000
+resources: {}
+ingress:
+  enabled: true
+  hosts:
+    - host: assistant.local
+      paths: ["/"]
