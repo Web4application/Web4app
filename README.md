@@ -1,8 +1,7 @@
 # Web4 — The Intelligent Internet
 
 Scaffold project.
-
-```bash
+```
 web4-intelligent-internet/
 ├─ README.md
 ├─ LICENSE
