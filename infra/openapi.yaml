@@ -1,0 +1,78 @@
+openapi: 3.0.3
+info:
+  title: Web4 API
+  version: "0.1.0"
+servers:
+  - url: http://localhost:8000
+paths:
+  /auth/signup:
+    post:
+      summary: User sign up
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Signup'
+      responses:
+        '200':
+          description: OK
+  /assistant/chat:
+    post:
+      summary: Chat with assistant
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: assistant response
+  /wallet/{address}/balance:
+    get:
+      summary: Get balance for address
+      parameters:
+        - name: address
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: balance
+  /faucet/request:
+    post:
+      summary: Request test tokens
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FaucetRequest'
+      responses:
+        '200':
+          description: queued
+
+components:
+  schemas:
+    Signup:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+    ChatRequest:
+      type: object
+      properties:
+        user_id:
+          type: string
+        message:
+          type: string
+    FaucetRequest:
+      type: object
+      properties:
+        address:
+          type: string
+        amount:
+          type: string
