@@ -1,5 +1,13 @@
 # Web4 — The Intelligent Internet
 
+Monorepo scaffold for the Web4 stack: Fadaka blockchain, Swift Wallet (Next.js), FastAPI Assistant, Faucet, FX Router, CertForge.
+
+Quickstart (dev):
+1. `git clone ...`
+2. `docker-compose up --build`
+3. Open frontend at http://localhost:3000
+4. Assistant API at http://localhost:8000/docs
+
 Scaffold project.
 ```bash
 web4-intelligent-internet/
