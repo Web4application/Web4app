@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web4 Intelligent Internet</title>
+</head>
+<body>
+  <h1>🚀 Web4 Intelligent Internet</h1>
+  <form id="askForm">
+    <input type="text" id="question" placeholder="Ask me anything..." />
+    <button type="submit">Send</button>
+  </form>
+  <pre id="response"></pre>
+
+  <script>
+    document.getElementById("askForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const q = document.getElementById("question").value;
+      const res = await fetch("http://localhost:8000/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: q })
+      });
+      const data = await res.json();
+      document.getElementById("response").innerText = data.answer;
+    });
+  </script>
+</body>
+</html>
