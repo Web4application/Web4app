@@ -2,3 +2,33 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15
+    environment:
+      POSTGRES_USER: web4
+      POSTGRES_PASSWORD: changeit
+      POSTGRES_DB: web4
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  redis:
+    image: redis:7
+  minio:
+    image: minio/minio
+    command: server /data
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio123
+  fadaka_node:
+    image: web4application/fadaka-node:latest
+    ports:
+      - "8545:8545"
+  assistant:
+    build: ./services/assistant
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://web4:changeit@postgres/web4
+  nginx:
+    image: nginx:stable
+    ports:
+      - "80:80"
+volumes:
+  pgdata:
