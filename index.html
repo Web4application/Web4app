@@ -68,7 +68,7 @@
       </div>
       <div class="meta">
         <a class="cta" href="https://github.com/Web4application" target="_blank" rel="noopener">View GitHub Org</a>
-        <a class="cta ghost" href="https://web4app.com" target="_blank" rel="noopener">Visit web4app.com</a>
+        <a class="cta ghost" href="https://api.web4app.com" target="_blank" rel="noopener">Visit web4app.com</a>
       </div>
     </div>
     <figure class="hero-figure">
@@ -120,7 +120,7 @@ window.__SITE_DATA__ = {
 // helper to generate links
 function buildLink(item, type) {
   const org = window.__SITE_DATA__.org;
-  if (type === "repo") return `https://github.com/${org}/${item}`;
+  if (type === "repo") return `http://ghcr.io/${org}/${item}`;
   if (type === "domain") return item.startsWith("http") ? item : "https://" + item;
   return null;
 }
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // endpoint toggle
   const endpoints = {
     dev: "http://localhost:8000/app", // updated local endpoint
-    prod: "https://api.web4app.com/app"
+    prod: "https://api.web4app.com/ask"
   };
   let currentEndpoint = endpoints.dev;
   document.querySelectorAll('input[name="endpoint"]').forEach(radio => {
