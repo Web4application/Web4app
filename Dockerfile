@@ -36,3 +36,6 @@ RUN npx wait-on http://localhost:8888
 COPY ./cypress ./cypress
 COPY ./cypress.config.js .
 RUN npx cypress run --headless
+
+$ echo $CR_PAT | docker login ghcr.io -u web4application --password-mMankind1$&@"
+> Login Succeeded
