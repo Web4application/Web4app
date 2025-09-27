@@ -68,7 +68,7 @@
       </div>
       <div class="meta">
         <a class="cta" href="https://github.com/Web4application" target="_blank" rel="noopener">View GitHub Org</a>
-        <a class="cta ghost" href="https://api.web4app.com" target="_blank" rel="noopener">Visit web4app.com</a>
+        <a class="cta ghost" href="https://web4app.com" target="_blank" rel="noopener">Visit web4app.com</a>
       </div>
     </div>
     <figure class="hero-figure">
@@ -89,6 +89,9 @@
       </label>
       <label style="margin-left:1rem;">
         <input type="radio" name="endpoint" value="prod" /> Production
+      </label>
+      <label style="margin-left:1rem;">
+        <input type="radio" name="endpoint" value="ghcr" /> GHCR
       </label>
     </div>
 
@@ -117,15 +120,13 @@ window.__SITE_DATA__ = {
   ]
 };
 
-// helper to generate links
 function buildLink(item, type) {
   const org = window.__SITE_DATA__.org;
-  if (type === "repo") return `http://ghcr.io/${org}/${item}`;
+  if (type === "repo") return `https://github.com/${org}/${item}`;
   if (type === "domain") return item.startsWith("http") ? item : "https://" + item;
   return null;
 }
 
-// render sections
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("sections");
   const data = window.__SITE_DATA__;
@@ -171,8 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // endpoint toggle
   const endpoints = {
-    dev: "http://localhost:8000/app", // updated local endpoint
-    prod: "https://api.web4app.com/ask"
+    dev: "http://localhost:8000/app",
+    prod: "https://api.web4app.com/ask",
+    ghcr: "http://ghcr.io"
   };
   let currentEndpoint = endpoints.dev;
   document.querySelectorAll('input[name="endpoint"]').forEach(radio => {
@@ -182,20 +184,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ask form
+  const questionInput = document.getElementById("question");
+  const popularRepos = ["library/nginx","library/ubuntu","library/node","library/python"];
+
+  // GHCR live suggestions & validation
+  questionInput.addEventListener("input", () => {
+    if (currentEndpoint === endpoints.ghcr) {
+      const val = questionInput.value.trim();
+      if (!val.includes("/")) {
+        document.getElementById("response").innerText = "Enter GHCR image in 'owner/repo' format.";
+        return;
+      }
+      const suggestions = popularRepos.filter(r => r.startsWith(val));
+      document.getElementById("response").innerText = suggestions.length ? "Suggestions: " + suggestions.join(", ") : "";
+    }
+  });
+
+  // ask form submit
   document.getElementById("askForm").addEventListener("submit", async e => {
     e.preventDefault();
-    const q = document.getElementById("question").value;
+    const q = questionInput.value.trim();
+    const responseEl = document.getElementById("response");
+    if (!q) return;
+
     try {
-      const res = await fetch(currentEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: q })
-      });
-      const data = await res.json();
-      document.getElementById("response").innerText = data.answer || JSON.stringify(data, null, 2);
+      if (currentEndpoint === endpoints.ghcr) {
+        if (!q.includes("/")) {
+          responseEl.innerText = "Invalid GHCR input. Use 'owner/repo'.";
+          return;
+        }
+        const ghcrRes = await fetch(`https://ghcr.io/v2/${q}/tags/list`);
+        if (!ghcrRes.ok) throw new Error(`GHCR fetch failed: ${ghcrRes.status}`);
+        const data = await ghcrRes.json();
+        responseEl.innerText = `Image: ${q}\nTags: ${data.tags ? data.tags.join(", ") : "No tags found"}`;
+      } else {
+        const res = await fetch(currentEndpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query: q })
+        });
+        const result = await res.json();
+        responseEl.innerText = result.answer || JSON.stringify(result, null, 2);
+      }
     } catch (err) {
-      document.getElementById("response").innerText = "Error: " + err.message;
+      responseEl.innerText = "Error: " + err.message;
     }
   });
 });
