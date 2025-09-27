@@ -1,30 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web4 Intelligent Internet</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web4application — Project Knowledge Base</title>
+  <meta name="description" content="Branded snapshot of the Web4application project knowledge base." />
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; line-height:1.5; background:#fafafa; color:#222; }
+    .site-header, .site-footer { background:#111; color:#fff; padding:1rem 2rem; }
+    .brand { display:flex; align-items:center; gap:1rem; }
+    .brand-logo { width:48px; height:48px; }
+    .nav { margin-top:.5rem; }
+    .nav a { color:#fff; margin-right:1rem; text-decoration:none; font-weight:bold; }
+    .nav a:hover { text-decoration:underline; }
+    .container { padding:2rem; max-width:1200px; margin:0 auto; }
+    .hero { display:flex; flex-wrap:wrap; align-items:center; gap:2rem; }
+    .hero-copy { flex:1 1 300px; }
+    .hero-copy h2 { margin-top:0; }
+    .search-wrap { margin:1rem 0; }
+    #search { width:100%; padding:.5rem; font-size:1rem; }
+    .cta { display:inline-block; margin:.25rem 0; padding:.5rem 1rem; background:#0070f3; color:#fff; text-decoration:none; border-radius:4px; }
+    .cta.ghost { background:#444; }
+    .hero-figure img { max-width:300px; border:1px solid #ddd; border-radius:4px; }
+    .grid { margin-top:2rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
+    section.section { background:#fff; border:1px solid #ddd; border-radius:6px; padding:1rem; }
+    section.section h2 { margin-top:0; font-size:1.2rem; border-bottom:1px solid #eee; padding-bottom:.5rem; }
+    section.section ul { padding-left:1.2rem; margin:0; }
+    section.section li { margin:.25rem 0; }
+    section.section a { color:#0070f3; text-decoration:none; }
+    section.section a:hover { text-decoration:underline; }
+    .site-footer { text-align:center; font-size:.9rem; margin-top:2rem; }
+    .ask-section { background:#fff; border:1px solid #ddd; border-radius:6px; padding:1.5rem; margin-top:2rem; }
+    .ask-section h1 { margin-top:0; }
+    .ask-section form { display:flex; gap:.5rem; margin-bottom:1rem; }
+    .ask-section input { flex:1; padding:.5rem; font-size:1rem; }
+    .ask-section button { padding:.5rem 1rem; font-size:1rem; background:#0070f3; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+    .ask-section button:hover { background:#005bb5; }
+    .ask-section pre { background:#f4f4f4; padding:1rem; border-radius:4px; max-height:300px; overflow:auto; }
+  </style>
 </head>
 <body>
-  <h1>🚀 Web4 Intelligent Internet</h1>
-  <form id="askForm">
-    <input type="text" id="question" placeholder="Ask me anything..." />
-    <button type="submit">Send</button>
-  </form>
-  <pre id="response"></pre>
+<header class="site-header">
+  <div class="brand">
+    <img src="assets/gpt5-mini-logo.png" alt="ChatGPT5 Mini logo" class="brand-logo" />
+    <div>
+      <h1>Web4application</h1>
+      <p class="tag">Project Knowledge Base</p>
+    </div>
+  </div>
+  <nav class="nav" aria-label="Primary">
+    <a href="#apps">Apps</a>
+    <a href="#repos">Repositories</a>
+    <a href="#templates">Templates</a>
+    <a href="#domains">Domains</a>
+    <a href="#tools">Tools</a>
+    <a href="#ask">Ask</a>
+  </nav>
+</header>
 
-  <script>
-    document.getElementById("askForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const q = document.getElementById("question").value;
-      const res = await fetch("http://localhost:8000/ask", {
+<main class="container">
+  <section class="hero">
+    <div class="hero-copy">
+      <h2>Everything in one clean map</h2>
+      <p>Browse projects, repos, infra, and domains. Search the entire knowledge base instantly.</p>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search projects, repos, tools…" aria-label="Search" />
+      </div>
+      <div class="meta">
+        <a class="cta" href="https://github.com/Web4application" target="_blank" rel="noopener">View GitHub Org</a>
+        <a class="cta ghost" href="https://web4app.com" target="_blank" rel="noopener">Visit web4app.com</a>
+      </div>
+    </div>
+    <figure class="hero-figure">
+      <img src="assets/project-mindmap.png" alt="Mind map of Web4application knowledge base" />
+      <figcaption>Project mind-map</figcaption>
+    </figure>
+  </section>
+
+  <div id="sections" class="grid"></div>
+
+  <section id="ask" class="ask-section">
+    <h1>🚀 Web4 Intelligent Internet</h1>
+    
+    <!-- Endpoint toggle -->
+    <div style="margin-bottom:1rem;">
+      <label>
+        <input type="radio" name="endpoint" value="dev" checked /> Localhost
+      </label>
+      <label style="margin-left:1rem;">
+        <input type="radio" name="endpoint" value="prod" /> Production
+      </label>
+    </div>
+
+    <form id="askForm">
+      <input type="text" id="question" placeholder="Ask me anything..." />
+      <button type="submit">Send</button>
+    </form>
+    <pre id="response"></pre>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© Web4application · Built with vanilla HTML/CSS/JS · Auto-links to GitHub org: Web4application</p>
+</footer>
+
+<script>
+window.__SITE_DATA__ = {
+  "title": "Web4application — Project Knowledge Base",
+  "org": "Web4application",
+  "sections": [
+    {"id": "apps", "label": "Apps / Projects", "type": "apps", "items": ["Lola", "ChatGPT5 Mini", "ROO4AI", "Swiftbot", "Web4Asset", "Web4AI_Project_Assistant"]},
+    {"id": "repos", "label": "Repositories (by theme)", "type": "repo", "items": ["fadaka-blockhaain", "fadaka-dashboard", "fadaka-factory", "Fadakacoin", "assets", "btc-hack", "Btchack", "etck333", "Failenbae-AI-Generative-Systems", "Failenbae-Web4-Infra-DevOps", "Failenbae-Chat-Social-Fun"]},
+    {"id": "templates", "label": "Templates & Demos", "type": "repo", "items": ["BEEZ-Chat", "Bizz", "BLACKPINKchat", "Discord", "blank-app", "demo-repository", "bnb-chain.github.io"]},
+    {"id": "domains", "label": "Domains", "type": "domain", "items": ["api.kubu-hai.com", "web4app.com", "konga-gateway.example", "github.com/Web4application/actions", "alembic.docs"]},
+    {"id": "tools", "label": "Tools / Infrastructure", "type": "tool", "items": ["Docker Compose", "Homebrew packaging", "ChatGPT5 Mini logo", "Fadaka Blockchain", "Web4AI identity"]}
+  ]
+};
+
+// helper to generate links
+function buildLink(item, type) {
+  const org = window.__SITE_DATA__.org;
+  if (type === "repo") return `https://github.com/${org}/${item}`;
+  if (type === "domain") return item.startsWith("http") ? item : "https://" + item;
+  return null;
+}
+
+// render sections
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("sections");
+  const data = window.__SITE_DATA__;
+
+  data.sections.forEach(section => {
+    const sec = document.createElement("section");
+    sec.id = section.id;
+    sec.className = "section";
+
+    const h2 = document.createElement("h2");
+    h2.textContent = section.label;
+    sec.appendChild(h2);
+
+    const ul = document.createElement("ul");
+    section.items.forEach(item => {
+      const li = document.createElement("li");
+      const link = buildLink(item, section.type);
+      if (link) {
+        const a = document.createElement("a");
+        a.href = link;
+        a.textContent = item;
+        a.target = "_blank";
+        a.rel = "noopener";
+        li.appendChild(a);
+      } else {
+        li.textContent = item;
+      }
+      ul.appendChild(li);
+    });
+    sec.appendChild(ul);
+    container.appendChild(sec);
+  });
+
+  // search filter
+  const search = document.getElementById("search");
+  search.addEventListener("input", e => {
+    const q = e.target.value.toLowerCase();
+    document.querySelectorAll("#sections section").forEach(sec => {
+      const match = [...sec.querySelectorAll("li")].some(li => li.textContent.toLowerCase().includes(q));
+      sec.style.display = match || q === "" ? "" : "none";
+    });
+  });
+
+  // endpoint toggle
+  const endpoints = {
+    dev: "http://localhost:8000/app", // updated local endpoint
+    prod: "https://api.web4app.com/app"
+  };
+  let currentEndpoint = endpoints.dev;
+  document.querySelectorAll('input[name="endpoint"]').forEach(radio => {
+    radio.addEventListener("change", e => {
+      currentEndpoint = endpoints[e.target.value];
+      document.getElementById("response").innerText = `Endpoint switched to: ${currentEndpoint}`;
+    });
+  });
+
+  // ask form
+  document.getElementById("askForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    const q = document.getElementById("question").value;
+    try {
+      const res = await fetch(currentEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: q })
       });
       const data = await res.json();
-      document.getElementById("response").innerText = data.answer;
-    });
-  </script>
+      document.getElementById("response").innerText = data.answer || JSON.stringify(data, null, 2);
+    } catch (err) {
+      document.getElementById("response").innerText = "Error: " + err.message;
+    }
+  });
+});
+</script>
 </body>
 </html>
