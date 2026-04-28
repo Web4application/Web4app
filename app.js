@@ -1,4 +1,3 @@
-
 (function(){
   const data = window.__SITE_DATA__ || {};
   const ORG = window.__ORG__ || 'Web4application';
