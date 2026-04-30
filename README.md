@@ -10,7 +10,7 @@ This build includes:
 ## Preview locally
 ```bash
 python3 -m http.server 8080
-# then open http://localhost:8080
+# then open https://127.0.0.1:8080
 ```
 
 ## Deploy
