@@ -10,7 +10,16 @@
             }
         </style><!-Google tag (gtag.js)
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9700LZ85M6"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-978QLZ85W6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9700LZ85M6');
+</script>
+
 
 <script>
 
@@ -64,9 +73,7 @@ gtag('config', 'G-9700LZ85M6');
                 }
                 console.log(t.value);
             }
-        </script> -->
-
-        <!-- Preconnect to Google Fonts -->
+        </script> --><!-- Preconnect to Google Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -190,7 +197,7 @@ gtag('config', 'G-9700LZ85M6');
                 <a
                   class="nav-item feature-nav"
                   id="featureNav"
-                  href="./index.html#features"
+                  href="./index.html#features.md"
                   >Features</a
                 >
               </li> -->
