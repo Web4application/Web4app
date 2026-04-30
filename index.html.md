@@ -10,7 +10,7 @@
             }
         </style><!-Google tag (gtag.js)
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-978QLZ85W6"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9700LZ85M6"></script>
 
 <script>
 
