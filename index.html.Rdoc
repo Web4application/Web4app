@@ -1,0 +1,1234 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <style>
+            .collapse-icon-d,
+            #chatMessage {
+                display: none;
+            }
+        </style><!-Google tag (gtag.js)
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-978QLZ85W6"></script>
+
+<script>
+
+window.dataLayer window.dataLayer || [
+
+function gtag()(datalayer.push(arguments);}
+
+gtag('js', new Date());
+
+gtag('config', 'G-9700LZ85M6');
+
+</script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-9700LZ85M6');
+        </script>
+
+        <script>
+            function buttonHandler() {
+                var t = document.getElementById('messageButton');
+                var chatMessage = document.getElementById('chatMessage');
+                if (t.value === 'YES') {
+                    chatMessage.style.display = 'none';
+                    t.value = 'NO';
+                } else {
+                    chatMessage.style.display = 'block';
+                    t.value = 'YES';
+                }
+                console.log(t.value);
+            }
+        </script>
+        <!-- <script>
+            function buttonHandler() {
+                var t = document.getElementById('messageButton');
+                if (t.value == 'YES') {
+                    document.getElementById('chatMessage').style.display =
+                        'none';
+                    t.value = 'NO';
+                } else if (t.value == 'NO') {
+                    document.getElementById('chatMessage').style.display =
+                        'block';
+                    t.value = 'YES';
+                }
+                console.log(t.value);
+            }
+        </script> -->
+
+        <!-- Preconnect to Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+        <!-- Load Material Icons stylesheet -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <link rel="stylesheet" href="/assets/css/flex-social-btns.css" />
+        <link rel="stylesheet" href="/assets/css/steps-to-signup-popup.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+            media="print"
+            onload="this.media='all'"
+        />
+        <script
+            async
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        ></script>
+        <script
+            async
+            src="https://unpkg.ai/swiper@8/swiper-bundle.min.js"
+        ></script>
+
+        <script
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+            media="print"
+            onload="this.media='all'"
+        />
+        <script async src="https://cdn.tailwindcss.com"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"
+            defer
+        ></script>
+        <meta
+            name="description"
+            content="LedgerMail - World's first Decentralized Email Solution on a mission of protecting Digital Rights of email users in a Decentralized way! Highest level of Email Security, Privacy, Encryption and Prevention from email attacks with 4th generation Blockchain."
+        />
+        <meta
+            name="description"
+            content="LedgerMail- World's first Blockchain Email Solution on mission of protecting Digital Rights of email users. provides highest level of Email Security, Privacy, Encryption and Prevention from email attacks with 4th generation Blockchain"
+        />
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png" />
+        <title>LedgerMail - Web4 Email</title>
+    </head>
+
+    <body class="font-custom">
+        <div>
+            <!-- nav -->
+            <header class="header-section text-white h-24 bg-white">
+                <nav class="nav-container">
+                    <div>
+                        <a href="/">
+                            <img
+                                src="/assets/img/logo-2.png"
+                                alt=""
+                                class="nav-icon"
+                            />
+                        </a>
+                    </div>
+                    <div class="lg:hidden block">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            id="menu-button"
+                            class="h-6 w-6 cursor-pointer svg-light"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="white"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        </svg>
+                    </div>
+                    <div
+                        class="hidden w-full lg:flex md:items-center lg:w-auto"
+                        id="menu"
+                    >
+                        <ul class="nav-items" id="navItems">
+                            <li>
+                                <a class="nav-item text-active" href="/"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav-item"
+                                    href="./about-us.html"
+                                    style="display: none"
+                                    >About</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav-item feature-nav"
+                                    id="featureNav"
+                                    href="./features.html"
+                                    >Features</a
+                                >
+                            </li>
+                            <li>
+                                <a class="nav-item" href="./our-ecosystem.html"
+                                    >Our Ecosystem</a
+                                >
+                            </li>
+                            <!-- <li>
+                <a
+                  class="nav-item feature-nav"
+                  id="featureNav"
+                  href="./index.html#features"
+                  >Features</a
+                >
+              </li> -->
+                            <li>
+                                <a class="nav-item" href="./blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a class="nav-item" href="./contact-us.html">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="nav-item"
+                                    target="_blank"
+                                    href="https://mail.ledgermail.io/auth/login"
+                                >
+                                    Sign In
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    target="_blank"
+                                    href="https://mail.ledgermail.io/auth/signup"
+                                    class="nav-item-signup text-center"
+                                >
+                                    Sign Up for Free
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- nav-end -->
+
+            <!-- Steps to signup [popup] -->
+            <!-- <div class="video-popup">
+                <div class="popup-bg"></div>
+                <div class="popup-content"> -->
+            <!--         <p class="popup-title">Youtube</p> -->
+            <!-- src="https://www.youtube.com/watch?v=V3yNtUG-aVU&feature=emb_title" -->
+            <!-- <iframe
+                        src="//www.youtube.com/embed/V3yNtUG-aVU?enablejsapi=1"
+                        class="video"
+                    ></iframe> -->
+            <!-- <button class="home-button close-btn">close</button> -->
+            <!-- </div>
+            </div> -->
+            <!-- Steps to signup [popup] -->
+
+            <!-- body -->
+            <main class="contents-width">
+                <!--header-section  -->
+                <section></section>
+                <section class="home-intro items-center flex justify-center">
+                    <div>
+                        <div class="grid md:grid-cols-9 gap-6 items-center">
+                            <div class="justify-center md:col-span-5">
+                                <div
+                                    class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-primary font-semibold"
+                                >
+                                    World's First <br />
+                                    Blockchain Email Service
+                                </div>
+                                <div
+                                    class="md:text-lg lg:text-xl xl:text-2xl text-center"
+                                >
+                                    Spearheading Web 3.0 Communication Protocols
+                                    & Protecting Digital Rights of Email Users
+                                </div>
+                                <div
+                                    class="grid lg:grid-cols-11 gap-3 items-center md:justify-between justify-center"
+                                >
+                                    <div class="lg:col-span-3">
+                                        <img
+                                            src="/assets/img/Build_XDC.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div
+                                        class="lg:col-span-8 grid grid-cols-2 justify-center gap-3"
+                                    >
+                                        <div>
+                                            <button
+                                                class="home-button"
+                                                onclick="window.open('https://mail.ledgermail.io/auth/signup')"
+                                            >
+                                                GET FREE ACCESS
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <button
+                                                id="signup-steps"
+                                                class="home-button"
+                                            >
+                                                STEPS TO SIGNUP
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-5 flex social-btns">
+                                    <!-- <a class="app-btn blu flex vert" href="http:apple.com">
+                  <i class="fab fa-apple fa-2x pr-2"></i>
+                  <p>Available on the <br /> <span class="big-txt">App Store</span></p>
+                </a> --> 
+
+                                    <a
+                                        class="app-btn blu flex vert"
+                                        href="https://play.google.com/store/apps/details?id=com.ledgermail"
+                                    >
+                                        <i
+                                            class="fab fa-google-play fa-2x pr-2"
+                                        ></i>
+                                        <p>
+                                            Get it on <br />
+                                            <span class="big-txt"
+                                                >Google Play</span
+                                            >
+                                        </p>
+                                    </a>
+
+                                    <!-- <a class="app-btn blu flex vert" href="http:alphorm.com">
+                  <i class="fas fa-desktop fa-2x pr-2"></i>
+                  <p>Application <br /> <span class="big-txt">Desktop</span></p>
+                </a> -->
+                                </div>
+                            </div>
+                            <div class="justify-self-center md:col-span-4">
+                                <iframe
+                                    width: 100%;
+                                    max-width: 560px;
+                                    height: 315px;
+                                    class="video-frame"
+                                    src="https://www.youtube.com/embed/iVNBMmyq_1c"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- header-section-end -->
+
+                <!-- dashboard -->
+                <section class="my-24" id="dashboard">
+                    <div class="section-title">DASHBOARD</div>
+                    <!-- stats -->
+                    <div class="stats mb-16">
+                        <!-- desktop -->
+                        <div
+                            class="hidden xl:block border stat-container-border"
+                        >
+                            <div class="grid grid-cols-3 stat-border-bottom">
+                                <div class="stat-border-right px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="totalUsersWeb"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-1"
+                                                aria-hidden="true"
+                                            >
+                                                groups
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Total Users
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-1"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stat-border-right px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="totalMailsWeb"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-2"
+                                                aria-hidden="true"
+                                            >
+                                                compare_arrows
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Total Email Exchange
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-2"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="activeWalletsWeb"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons text-white stat-icon stat-background-3"
+                                                aria-hidden="true"
+                                            >
+                                                account_balance_wallet
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Active Wallets
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-3"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3">
+                                <div class="stat-border-right px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="usersFromTopCompetitionWeb"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-4"
+                                                aria-hidden="true"
+                                            >
+                                                group
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Users from Top Competition
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-4"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stat-border-right px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="userCreditedAmountWeb"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-5"
+                                                aria-hidden="true"
+                                            >
+                                                credit_score
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                User Credited XDC
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-5"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="referralCreditedAmountWeb"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons text-white stat-icon stat-background-6"
+                                                aria-hidden="true"
+                                            >
+                                                group_add
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Referral Credited XDC
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-6"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- desktop-end -->
+                        <!-- tab -->
+                        <div
+                            class="hidden md:block xl:hidden container stat-container-border"
+                        >
+                            <div class="grid grid-cols-2 stat-border-bottom">
+                                <div class="stat-border-right px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="totalUsersTab"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-1"
+                                                aria-hidden="true"
+                                            >
+                                                groups
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Total Users
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-1"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="totalMailsTab"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-2"
+                                                aria-hidden="true"
+                                            >
+                                                compare_arrows
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Total Email Exchange
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-2"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 stat-border-bottom">
+                                <div class="stat-border-right px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="activeWalletsTab"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons text-white stat-icon stat-background-3"
+                                                aria-hidden="true"
+                                            >
+                                                account_balance_wallet
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Active Wallets
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-3"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="usersFromTopCompetitionTab"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-4"
+                                                aria-hidden="true"
+                                            >
+                                                group
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Users from Top Competition
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-4"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2">
+                                <div class="stat-border-right px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="userCreditedAmountTab"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-5"
+                                                aria-hidden="true"
+                                            >
+                                                credit_score
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                User Credited XDC
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-5"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <div
+                                        class="stat-numbers"
+                                        id="referralCreditedAmountTab"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons text-white stat-icon stat-background-6"
+                                                aria-hidden="true"
+                                            >
+                                                group_add
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Referral Credited XDC
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-6"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab-end -->
+                        <!-- mobile -->
+                        <div class="md:hidden container stat-container-border">
+                            <div class="grid grid-cols-1">
+                                <div class="stat-border-bottom px-4 py-3">
+                                    <div
+                                        class="stat-numbers-mobile"
+                                        id="totalUsersMobile"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-1"
+                                                aria-hidden="true"
+                                            >
+                                                groups
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Total Users
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-1"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stat-border-bottom px-4 py-3">
+                                    <div
+                                        class="stat-numbers-mobile"
+                                        id="totalMailsMobile"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-2"
+                                                aria-hidden="true"
+                                            >
+                                                compare_arrows
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Total Email Exchange
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-2"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stat-border-bottom px-4 py-3">
+                                    <div
+                                        class="stat-numbers-mobile"
+                                        id="activeWalletsMobile"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons text-white stat-icon stat-background-3"
+                                                aria-hidden="true"
+                                            >
+                                                account_balance_wallet
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Active Wallets
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-3"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stat-border-bottom px-4 py-3">
+                                    <div
+                                        class="stat-numbers-mobile"
+                                        id="usersFromTopCompetitionMobile"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-4"
+                                                aria-hidden="true"
+                                            >
+                                                group
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Users from Top Competition
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-4"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stat-border-bottom px-4 py-3">
+                                    <div
+                                        class="stat-numbers-mobile"
+                                        id="userCreditedAmountMobile"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons stat-icon text-white stat-background-5"
+                                                aria-hidden="true"
+                                            >
+                                                credit_score
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                User Credited XDC
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-5"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-3">
+                                    <div
+                                        class="stat-numbers-mobile"
+                                        id="referralCreditedAmountMobile"
+                                    >
+                                        0
+                                    </div>
+                                    <div class="grid grid-cols-5">
+                                        <div class="">
+                                            <i
+                                                class="material-icons text-white stat-icon stat-background-6"
+                                                aria-hidden="true"
+                                            >
+                                                group_add
+                                            </i>
+                                        </div>
+                                        <div class="col-span-4">
+                                            <div
+                                                class="text-xl font-semibold mb-4"
+                                            >
+                                                Referral Credited XDC
+                                            </div>
+                                            <div
+                                                class="stat-border-bottom-container"
+                                            >
+                                                <div
+                                                    class="stat-border-6"
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mobile-end -->
+                    </div>
+                    <!-- stats-end -->
+
+                    <!-- dash-slider -->
+
+                    <div class="dashboard swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img
+                                    src="/assets/img/home/dash-slider/slider-1.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="/assets/img/home/dash-slider/slider-2.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- dash-slider-end -->
+                </section>
+                <!-- dashboard-end -->
+
+                <!-- Problems -->
+                <section class="my-24" id="problems">
+                    <div class="grid lg:grid-cols-10 gap-6">
+                        <div class="section-header lg:col-span-5">PROBLEMS</div>
+                    </div>
+                    <div class="grid lg:grid-cols-9 mt-6 gap-6">
+                        <div class="problems lg:col-span-4 order-2 lg:order-1">
+                            <div class="section-subheader">
+                                What is Problem with Legacy Email Providers?
+                            </div>
+                            <div class="accordion" id="accordionExample5">
+                                <div
+                                    class="accordion-item collapse-expand-item"
+                                >
+                                    <h2
+                                        class="accordion-header mb-0"
+                                        id="headingOne5"
+                                    >
+                                        <button
+                                            id="buttonOne"
+                                            class="collapse-expand-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne5"
+                                            aria-expanded="false"
+                                            aria-controls="collapseOne5"
+                                            onclick="updateProblem('buttonOne')"
+                                        >
+                                            <div>
+                                                <i
+                                                    class="expandOne material-icons expand-icon"
+                                                    aria-hidden="true"
+                                                >
+                                                    keyboard_arrow_right
+                                                </i>
+                                                <i
+                                                    class="collapseOne material-icons collapse-icon collapse-icon-d"
+                                                    aria-hidden="true"
+                                                >
+                                                    remove
+                                                </i>
+                                            </div>
+                                            Insecure
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseOne5"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne5"
+                                    >
+                                        <div
+                                            class="accordion-body collapse-expand-body"
+                                        >
+                                            Legacy email service providers rely
+                                            on obsolete protocols, like
+                                            IMAP/SMTP, which were designed and
+                                            developed in 1982 and last updated
+                                            in 2008. They are, as such, not only
+                                            cumbersome to use but also highly
+                                            susceptible to hacks and exploits.
+                                            In the past two years alone, 94% of
+                                            cyberattacks were carried out via
+                                            email, resulting in over $26 Billion
+                                            in losses worldwide.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-item collapse-expand-item"
+                                >
+                                    <h2
+                                        class="accordion-header mb-0"
+                                        id="headingTwo5"
+                                    >
+                                        <button
+                                            id="buttonTwo"
+                                            onclick="updateProblem('buttonTwo')"
+                                            class="collapse-expand-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo5"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo5"
+                                        >
+                                            <div>
+                                                <i
+                                                    class="expandTwo material-icons expand-icon"
+                                                    aria-hidden="true"
+                                                >
+                                                    keyboard_arrow_right
+                                                </i>
+                                                <i
+                                                    class="collapseTwo material-icons collapse-icon collapse-icon-d"
+                                                    aria-hidden="true"
+                                                >
+                                                    remove
+                                                </i>
+                                            </div>
+                                            No Privacy
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseTwo5"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo5"
+                                    >
+                                        <div
+                                            class="accordion-body collapse-expand-body"
+                                        >
+                                            Legacy email service providers like
+                                            Google make their money by riffling
+                                            through your data. They read your
+                                            emails and analyze their contents in
+                                            order to make you a better target
+                                            for the ads they bombard you with.
+                                            That’s their business model. Data
+                                            privacy is only an illusion. Read
+                                            more about email privacy, or the
+                                            lack thereof, here .
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-item collapse-expand-item"
+                                >
+                                    <h2
+                                        class="accordion-header mb-0"
+                                        id="headingThree5"
+                                    >
+                                        <button
+                                            class="collapse-expand-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree5"
+                                            aria-expanded="false"
+                                            aria-controls="collapseThree5"
+                                            id="buttonThree"
+                                            onclick="updateProblem('buttonThree')"
+                                        >
+                                            <div>
+                                                <i
+                                                    class="expandThree material-icons expand-icon"
+                                                    aria-hidden="true"
+                                                >
+                                                    keyboard_arrow_right
+                                                </i>
+                                                <i
+                                                    class="collapseThree material-icons collapse-icon collapse-icon-d"
+                                                    aria-hidden="true"
+                                                >
+                                                    remove
+                                                </i>
+                                            </div>
+                                            No Encryption
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseThree5"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree5"
+                                    >
+                                        <div
+                                            class="accordion-body collapse-expand-body"
+                                        >
+                                            Legacy email service providers
+                                            either don’t offer any encryption at
+                                            all or provide inadequate encryption
+                                            in terms of network connection.
+                                            However, actual email content and
+                                            attachments remain unencrypted thus
+                                            if a hacker manages to tap into your
+                                            network, all your unencrypted
+                                            messages will be exposed to the
+                                            outside world.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="accordion-item collapse-expand-item"
+                                >
+                                    <h2
+                                        class="accordion-header mb-0"
+                                        id="headingFour5"
+                                    >
+                                        <button
+                                            class="collapse-expand-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFour5"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFour5"
+                                            id="buttonFour"
+                                            onclick="updateProblem('buttonFour')"
+                                        >
+                                            <div>
+                                                <i
+                                                    class="expandFour material-icons expand-icon"
+                                                    aria-hidden="true"
+                                                >
+                                                    keyboard_arrow_right
+                                                </i>
+                                                <i
+                                                    class="collapseFour material-icons collapse-icon collapse-icon-d"
+                                                    aria-hidden="true"
+                                                >
+                                                    remove
+                                                </i>
+                                            </div>
+                                            Centralized Governance
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseFour5"
+                                        class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour5"
+                                    >
+                                        <div
+                                            class="accordion-body collapse-expand-body"
+                                        >
+                                            Legacy email service providers are
+                                            centralized. They control your data
+                                            and, that means, they can lose
+                                            control of your data too. Their
+                                            servers, with your data on them, can
+                                            be destroyed, on purpose or by
+                                            accident, and they can be seized by
+                                            malicious hackers, state, or even
+                                            non-state actors.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="problems lg:col-span-5 order-1 lg:order-2 lg:justify-self-end justify-self-center"
+                        >
+                            <img src="/assets/img/home/Problems.png" alt="" />
+                        </div>
+                    </div>
+                </section>
+                <!-- problems-end -->
+
+                <!-- Solutions -->
+                <section class="my-24" id="solutions">
+                    <div class="grid lg:grid-cols-10 lg:gap-6">
+                        <div class="lg:col-span-5"></div>
+                        <div class="section-header lg:col-span-5">SOLUTION</div>
+                    </div>
+                    <div class="grid lg:grid-cols-9 mt-6">
+                        <div
+                            class="problems lg:col-span-5 lg:justify-self-start justify-self-center"
+                        >
+                            <img src="/assets/img/home/Solutions.png" alt="" />
+                        </div>
+                        <div class="problems lg:col-span-4">
+                            <div class="section-subheader">Why LedgerMail?</div>
+                            <div class="section-description">
+                                LedgerMail is an immutable, truly private,
+                                completely secure, fully customizable, and
+                                cost-effective email service that will soon
+                    
